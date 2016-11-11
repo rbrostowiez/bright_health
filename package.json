@@ -1,0 +1,14 @@
+{
+  "name": "bright_health",
+  "version": "0.0.1",
+  "description": "A sample application for BrightHealth",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Raymond Brostowicz",
+  "license": "ISC",
+  "dependencies": {
+    "shrinkwrap": "^0.4.0"
+  }
+}

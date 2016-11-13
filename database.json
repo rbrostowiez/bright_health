@@ -1,0 +1,11 @@
+{
+  "dev": {
+    "host": "localhost",
+    "user": "brighthealth",
+    "password": "devPass1",
+    "database": "brighthealth",
+    "driver": "mysql",
+    "multiple-statements": true
+  },
+  "sql-file": true
+}

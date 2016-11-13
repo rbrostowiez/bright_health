@@ -342,6 +342,67 @@
         }
       }
     },
+    "db-migrate-mysql": {
+      "version": "1.1.10",
+      "from": "db-migrate-mysql@latest",
+      "resolved": "https://registry.npmjs.org/db-migrate-mysql/-/db-migrate-mysql-1.1.10.tgz",
+      "dependencies": {
+        "db-migrate-base": {
+          "version": "1.2.7",
+          "from": "db-migrate-base@>=1.2.5 <2.0.0",
+          "resolved": "https://registry.npmjs.org/db-migrate-base/-/db-migrate-base-1.2.7.tgz"
+        },
+        "moment": {
+          "version": "2.16.0",
+          "from": "moment@>=2.11.2 <3.0.0",
+          "resolved": "https://registry.npmjs.org/moment/-/moment-2.16.0.tgz"
+        },
+        "mysql": {
+          "version": "2.12.0",
+          "from": "mysql@>=2.10.2 <3.0.0",
+          "resolved": "https://registry.npmjs.org/mysql/-/mysql-2.12.0.tgz",
+          "dependencies": {
+            "bignumber.js": {
+              "version": "2.4.0",
+              "from": "bignumber.js@2.4.0",
+              "resolved": "https://registry.npmjs.org/bignumber.js/-/bignumber.js-2.4.0.tgz"
+            },
+            "readable-stream": {
+              "version": "1.1.14",
+              "from": "readable-stream@1.1.14",
+              "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-1.1.14.tgz",
+              "dependencies": {
+                "core-util-is": {
+                  "version": "1.0.2",
+                  "from": "core-util-is@>=1.0.0 <1.1.0",
+                  "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz"
+                },
+                "isarray": {
+                  "version": "0.0.1",
+                  "from": "isarray@0.0.1",
+                  "resolved": "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz"
+                },
+                "string_decoder": {
+                  "version": "0.10.31",
+                  "from": "string_decoder@>=0.10.0 <0.11.0",
+                  "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-0.10.31.tgz"
+                },
+                "inherits": {
+                  "version": "2.0.3",
+                  "from": "inherits@>=2.0.1 <2.1.0",
+                  "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.3.tgz"
+                }
+              }
+            },
+            "sqlstring": {
+              "version": "2.2.0",
+              "from": "sqlstring@2.2.0",
+              "resolved": "https://registry.npmjs.org/sqlstring/-/sqlstring-2.2.0.tgz"
+            }
+          }
+        }
+      }
+    },
     "express": {
       "version": "4.14.0",
       "from": "express@latest",

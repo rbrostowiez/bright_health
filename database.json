@@ -5,7 +5,7 @@
     "password": "devPass1",
     "database": "brighthealth",
     "driver": "mysql",
-    "multiple-statements": true
+    "multipleStatements": true
   },
   "sql-file": true
 }

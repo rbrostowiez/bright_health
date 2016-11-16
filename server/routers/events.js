@@ -7,28 +7,31 @@ const express = require('express');
 const Events = express.Router();
 
 Events.get('/', (req, res)=>{
-    eventsModel.getEvents();
+    req.eventModel.getEvents()
+        .then((events)=>{
+            res.json(events);
+        });
 });
 
 Events.post('/', (req, res)=>{
     //const event = req.body;
-    eventsModel.createEvent(eventsModel)
+    req.eventModel.createEvent(eventsModel)
         .then((event)=>{
             res.json(event);
         });
 });
 
 Events.get('/:id', (req, res)=>{
-    eventsModel.getEventById(req.param.id)
+    req.eventModel.getEventById(req.param.id)
         .then((event)=>{
             res.json(event);
         });
 });
 
 Events.put('/:id', (req, res)=>{
-    eventsModel.updateEvent(req.body)
+    req.eventModel.updateEvent(req.body)
         .then((event)=>{
-            res.send(event);
+            res.json(event);
         })
 });
 

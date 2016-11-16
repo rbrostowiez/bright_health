@@ -15,15 +15,17 @@ const EventModel = require('./models/event-model');
 const app = express();
 
 
-app.use('/', routers);
 
 // Initializing DB connection then starting the app
 mysql.createConnection(config.db)
     .then((dbCon)=>{
         // Mounting models
-        app.use((req, res)=>{
-            req.eventsModel = new EventModel(dbCon);
+        app.use((req, res, next)=>{
+            req.eventModel = new EventModel(dbCon);
+            next();
         });
+
+        app.use('/', routers);
 
         app.listen(config.server.port, (server)=>{
             console.log(`Listening on ${config.server.port}`);

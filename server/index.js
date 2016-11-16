@@ -2,14 +2,32 @@
  * Created by ray on 11/12/16.
  */
 
-import express from 'express';
+const express = require('express');
+const config = require('config');
+const mysql = require('promise-mysql');
 
-import routers from './routers';
+
+
+const routers = require('./routers');
+const EventModel = require('./models/event-model');
+
 
 const app = express();
 
+
 app.use('/', routers);
 
+// Initializing DB connection then starting the app
+mysql.createConnection(config.db)
+    .then((dbCon)=>{
+        // Mounting models
+        app.use((req, res)=>{
+            req.eventsModel = new EventModel(dbCon);
+        });
 
-// TODO: Start server
+        app.listen(config.server.port, (server)=>{
+            console.log(`Listening on ${config.server.port}`);
+        });
+    })
+    .catch(console.error);
 

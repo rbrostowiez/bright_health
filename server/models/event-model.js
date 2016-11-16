@@ -2,9 +2,11 @@
  * Created by ray on 11/13/16.
  */
 
-// TODO: Imports
-
 class EventModel{
+
+    constructor(dbCon){
+        this.dbCon = dbCon;
+    }
 
     getEventById(id){
         // TODO: Retrieve an event
@@ -23,4 +25,4 @@ class EventModel{
     }
 }
 
-export default EventModel;
+module.exports = EventModel;

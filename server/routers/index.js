@@ -2,11 +2,12 @@
  * Created by ray on 11/12/16.
  */
 
-import express from 'express';
+const express = require('express');
 
+const events = require('./events');
 
 const Index = express.Router();
 
-// TODO: Routes & middleware
+Index.use('/events', events);
 
-export default Index;
+module.exports = Index;

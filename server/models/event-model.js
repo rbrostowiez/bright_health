@@ -3,6 +3,7 @@
  */
 
 const SELECT_QUERY = 'SELECT * FROM events';
+const INSERT_QUERY = 'INSERT eventTitle, startDate, endDate, description, featuredFlag INTO events VALUES (?, ?, ?, ?, ?)';
 
 
 class EventModel{
@@ -32,7 +33,17 @@ class EventModel{
     }
 
     createEvent(event){
-        // TODO: create event
+        const {eventTitle, startDate, endDate, description, featuredFlag, categories} = event;
+        return this.dbCon.query(INSERT_QUERY, [eventTitle, startDate, endDate, description, featuredFlag])
+            .then((results)=>{
+                //TODO: Insert category mappings
+
+                return results;
+            })
+            .catch((error)=>{
+                console.error(error);
+                return {error: "Database error!"};
+            })
     }
 }
 

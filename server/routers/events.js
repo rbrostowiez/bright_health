@@ -14,8 +14,7 @@ Events.get('/', (req, res)=>{
 });
 
 Events.post('/', (req, res)=>{
-    //const event = req.body;
-    req.eventModel.createEvent(eventsModel)
+    req.eventModel.createEvent(req.body)
         .then((event)=>{
             res.json(event);
         });
